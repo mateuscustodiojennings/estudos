@@ -1,0 +1,45 @@
+{
+  "name": "monitoramento_estudos",
+  "version": "1.0.0",
+  "description": "Sistema Web de Acompanhamento de Estudos baseado no catálogo do Professor Ferretto",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "extract:pdf": "python3 scripts/extract_pdf.py",
+    "import:pdf": "node scripts/import_data.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "estudos",
+    "monitoramento",
+    "ferretto",
+    "enem",
+    "nextjs",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.9.0",
+    "next": "^16.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "dotenv": "^16.4.5",
+    "mongodb-memory-server": "^10.0.1",
+    "typescript": "^5.6.3"
+  }
+}

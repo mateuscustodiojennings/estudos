@@ -1,0 +1,233 @@
+/* Estilos Globais e Identidade Visual Minimalista */
+:root {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+  
+  /* Azul-bebê e variações para realce */
+  --baby-blue: #38bdf8;
+  --baby-blue-dark: #0284c7;
+  --baby-blue-light: #f0f9ff;
+  --baby-blue-badge: #e0f2fe;
+  --baby-blue-border: #bae6fd;
+
+  --success-color: #10b981;
+  --success-light: #ecfdf5;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+.navbar-app {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.85rem 1rem;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.brand-dot {
+  color: var(--baby-blue-dark);
+}
+
+/* Card Minimalista */
+.minimal-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.minimal-card:hover {
+  border-color: #cbd5e1;
+}
+
+/* Badges e Pílulas */
+.badge-baby-blue {
+  background-color: var(--baby-blue-badge);
+  color: var(--baby-blue-dark);
+  font-weight: 600;
+  border: 1px solid var(--baby-blue-border);
+}
+
+.badge-neutral {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* Barra de Progresso Personalizada */
+.progress-container {
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-bar-baby {
+  background-color: var(--baby-blue-dark);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-bar-success {
+  background-color: var(--success-color);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botões Customizados */
+.btn-baby-primary {
+  background-color: var(--baby-blue-dark);
+  color: #ffffff;
+  border: 1px solid var(--baby-blue-dark);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease;
+}
+
+.btn-baby-primary:hover, .btn-baby-primary:focus {
+  background-color: #0369a1;
+  border-color: #0369a1;
+  color: #ffffff;
+}
+
+.btn-minimal {
+  background-color: #ffffff;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-minimal:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: var(--text-main);
+}
+
+.btn-minimal.active {
+  background-color: var(--baby-blue-badge);
+  color: var(--baby-blue-dark);
+  border-color: var(--baby-blue-border);
+}
+
+/* Checkboxes Otimizados para Toque */
+.touch-checkbox {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  cursor: pointer;
+  border-color: #94a3b8 !important;
+  border-radius: 4px !important;
+  margin-top: 0.15rem;
+}
+
+.touch-checkbox:checked {
+  background-color: var(--baby-blue-dark) !important;
+  border-color: var(--baby-blue-dark) !important;
+}
+
+.touch-checkbox:focus {
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25) !important;
+  border-color: var(--baby-blue-dark) !important;
+}
+
+/* Item de Conteúdo e Aulas */
+.study-item-row {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid #f1f5f9;
+  border-radius: 6px;
+  transition: background-color 0.1s ease;
+}
+
+.study-item-row:last-child {
+  border-bottom: none;
+}
+
+.study-item-row:hover {
+  background-color: #f8fafc;
+}
+
+.study-item-row.completed {
+  background-color: #fafbfc;
+}
+
+.study-item-row.completed .item-text {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* Módulo Accordion Header */
+.module-header {
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-radius: 8px;
+}
+
+.module-header:hover {
+  background-color: #f8fafc;
+}
+
+.module-header.completed-module {
+  background-color: #f8fafc;
+}
+
+/* Alertas Discretos */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1050;
+  max-width: 380px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Animações Sutis */
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .navbar-app {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .minimal-card {
+    border-radius: 10px;
+  }
+  
+  .touch-checkbox {
+    width: 1.35rem !important;
+    height: 1.35rem !important;
+  }
+}
